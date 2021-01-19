@@ -1,6 +1,5 @@
 const router = require("express").Router()
 
-// const db = require("../../utils/db")
 const Model = require("../../utils/model")
 const Articles = new Model("articles")
 
