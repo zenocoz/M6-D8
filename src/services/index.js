@@ -4,7 +4,7 @@ const authorsRouter = require("./authors")
 const categoriesRouter = require("./categories")
 
 router.use("/articles", articlesRouter)
-// router.use("/authors", authorsRouter)
-// router.use("/categories", categoriesRouter)
+router.use("/categories", categoriesRouter)
+router.use("/authors", authorsRouter)
 
 module.exports = router
