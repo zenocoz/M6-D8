@@ -46,6 +46,7 @@ class Model {
 
   async findOne(fields) {
     // {name:'Luis',lastname:'Ordonez'} => 'name'="'Diego'" AND 'lastname'="'Banovaz'"
+
     if (!fields || Object.values(fields).length === 0) {
       const query = `SELECT * FROM ${this.name}`
       const response = await this.run(query)
@@ -56,6 +57,7 @@ class Model {
         .map(([key, value]) => `${key}='${value}'`)
         .join(" AND ")}`
       const query = `SELECT * FROM ${this.name} WHERE  ${whereClause};`
+      console.log(query)
       const response = await this.run(query)
       return response
     }

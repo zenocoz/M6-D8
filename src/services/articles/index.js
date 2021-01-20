@@ -5,7 +5,7 @@ const Articles = new Model("articles")
 
 router.get("/", async (req, res, next) => {
   try {
-    const response = await Articles.findOne()
+    const response = await Articles.findOne(req.query)
     res.send(response)
   } catch (e) {
     console.log(e)
