@@ -46,6 +46,7 @@ class Model {
 
   async findOne(fields) {
     // {name:'Luis',lastname:'Ordonez'} => 'name'="'Diego'" AND 'lastname'="'Banovaz'"
+    //SELECT a.
 
     if (!fields || Object.values(fields).length === 0) {
       const query = `SELECT * FROM ${this.name}`
